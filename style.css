@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background: rgb(160, 211, 224);
+}
+
+.snare-pad {
+  background: rgb(200, 166, 211);
+}
+
+.hihat-pad {
+  background: rgb(218, 219, 169);
+}
+
+.kick-pad.active {
+  background: rgb(78, 196, 226);
+}
+
+.snare-pad.active {
+  background: rgb(203, 104, 236);
+}
+.hihat-pad.active {
+  background: rgb(243, 245, 127);
+}
+
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hihat-track,
+.snare-track,
+.kick-track {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 2rem;
+}
+
+.controls button {
+  padding: 1rem;
+  margin-left: 5rem;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: rgb(88, 88, 88);
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.hihat-track button {
+  margin-left: 8rem;
+}
+
+.snare-track button {
+  margin-left: 7.5rem;
+}
+
+.kick-track button {
+  margin-left: 9rem;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.play {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background: rgb(88, 88, 88);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.mute.active {
+  background: grey;
+}
+
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: white;
+}
+
+.tempo-slider {
+  padding: 0.2rem;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background: rgb(156, 154, 154);
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
